@@ -18,11 +18,13 @@ const App = () => {
     const [images, setImages] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
-    const [page, setPage] = useState(0);
+    const [page, setPage] = useState(1);
+    const [query, setQuery] = useState('')
 
     const handleSearch = async (topic) => {
         try {
-
+            setPage(1)
+            setQuery(topic)
             setLoading(true)
             const response = await axios.get(API_URL, {
                 params: {
