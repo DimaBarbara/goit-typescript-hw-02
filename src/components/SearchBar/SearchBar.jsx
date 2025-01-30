@@ -1,6 +1,7 @@
 import React from 'react'
 import { toast } from 'react-hot-toast';
-
+import BackgroundVideo from '../BackgroundVideo/BackgroundVideo';
+import styles from "./SearchBar.module.css"
 const SearchBar = ({ onSubmit }) => {
     
     const handleSubmit = (e) => {
@@ -8,7 +9,7 @@ const SearchBar = ({ onSubmit }) => {
         const form = e.target;
         const topic = form.elements.topic.value;
         if (form.elements.topic.value.trim() === "") {
-            toast.error("This didn't work.")
+            toast.error("Try to enter something")
 			return;
 		}
         onSubmit(topic);
@@ -16,16 +17,18 @@ const SearchBar = ({ onSubmit }) => {
 
     }
   return (
-    <header>
+    <header className={styles.header}>
+      <BackgroundVideo/>
   <form onSubmit={handleSubmit}>
     <input
+      className={styles.input}
       type="text"
       autoComplete="off"
       autoFocus
                   placeholder="Search images and photos"
                   name="topic"
     />
-    <button type="submit">Search</button>
+    <button className={styles.button} type="submit">Search</button>
   </form>
 </header>
 

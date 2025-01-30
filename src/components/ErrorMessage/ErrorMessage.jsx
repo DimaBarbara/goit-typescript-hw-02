@@ -1,10 +1,11 @@
 import React from 'react'
 import { FaExclamationCircle } from 'react-icons/fa';
+import styles from "./ErrorMessage.module.css"
 
 const ErrorMessage = () => (
     
-  <div style={{ color: 'red', display: 'flex', alignItems: 'center' }}>
-    <FaExclamationCircle style={{ marginRight: '10px' }} />
+  <div className={styles.div} >
+    <FaExclamationCircle className={styles.circle} />
     <p>Виникла помилка, будь-ласка, спробуйте ще.</p>
   </div>
 );
