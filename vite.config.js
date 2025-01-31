@@ -12,4 +12,9 @@ export default defineConfig({
   optimizeDeps: {
     include: ["video.js"], // Если используете библиотеки для работы с видео
   },
+  css: {
+    modules: {
+      localsConvention: "dashes", // Конвенция для именования классов CSS-модулей
+    },
+  },
 });
