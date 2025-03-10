@@ -1,0 +1,11 @@
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: "red";
+  gap: 10px;
+}
+.circle {
+  margin-right: "10px";
+}
